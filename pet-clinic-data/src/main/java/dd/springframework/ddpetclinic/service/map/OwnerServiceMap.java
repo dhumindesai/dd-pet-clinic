@@ -1,11 +1,17 @@
 package dd.springframework.ddpetclinic.service.map;
 
 import dd.springframework.ddpetclinic.model.Owner;
-import dd.springframework.ddpetclinic.service.CrudService;
+import dd.springframework.ddpetclinic.service.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+@Service
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
 
     @Override
     public Owner findById(Long id) {
